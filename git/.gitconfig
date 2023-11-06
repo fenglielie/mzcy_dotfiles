@@ -1,0 +1,7 @@
+[user]
+	name = fenglielie
+	email = fenglielie@qq.com
+[init]
+	defaultBranch = main
+[core]
+	editor = vim

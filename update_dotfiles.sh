@@ -24,4 +24,8 @@ echo "update tmux configuration"
 ln -sf ~/.mzcy_dotfiles/vim/.vimrc ~/.vimrc
 echo "update vim configuration"
 
+# git
+ln -sf ~/.mzcy_dotfiles/git/.gitconfig ~/.gitconfig
+echo "update git configuration"
+
 
