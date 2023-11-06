@@ -4,7 +4,7 @@
 script_root_dir=$(dirname "$(realpath "$0")")
 
 # get projectroot dir
-project_root_dir="~/projectroot"
+project_root_dir="$HOME/projectroot"
 
 # .editorconfig
 ln -sf "$script_root_dir/editorconfig/.editorconfig" "$project_root_dir/.editorconfig"
