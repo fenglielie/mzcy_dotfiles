@@ -14,6 +14,7 @@ else
 fi
 
 cp -rf ./* ~/.mzcy_dotfiles/
+cp -r ./.[!.]* ~/.mzcy_dotfiles/
 
 # tmux
 ln -sf ~/.mzcy_dotfiles/tmux/.tmux.conf ~/.tmux.conf
