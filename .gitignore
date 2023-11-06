@@ -1,0 +1,63 @@
+# fenglielie@qq.com
+# .gitignore template
+# 2023-09-14
+##################################################################
+# # [[C++]]
+# # Compiled Object files
+# *.o
+# *.obj
+# # Precompiled Headers
+# *.gch
+# *.pch
+# # Compiled Dynamic libraries
+# *.so
+# *.dll
+# # Fortran module files
+# *.mod
+# *.smod
+# # Compiled Static libraries
+# *.a
+# *.lib
+# # Executables
+# *.exe
+# *.out
+# # Build directory and results
+# build/
+# [Dd]ebug/
+# [Rr]elease/
+# [Rr]eleases/
+# x64/
+# x86/
+# [Bb]in/
+# [Ll]ib/
+# [Ll]og/
+# # [[Other]]
+# # temp/log/backup
+# *~
+# *.tmp
+# *.log
+# *.bak
+# *.backup
+# # document
+# *.pdf
+##################################################################
+# *
+# !.gitignore
+# !.gitattributes
+# !.editorconfig
+# !source/
+# !src/
+# !include/
+# !doc/
+# !cmake/
+# !readme.md
+# !index.html
+##################################################################
+# *
+# !.gitignore
+# !.gitattributes
+# !.editorconfig
+# !*.tex*
+# !*.bib*
+# ![Ii]mage*/
+# ![Ff]igure*/
