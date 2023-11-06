@@ -377,4 +377,3 @@ function(mzcy_target_info _target)
 
     message(STATUS "------------------------------------------")
 endfunction()
-
