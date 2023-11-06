@@ -1,0 +1,553 @@
+{
+    //**************************************************************************//
+    //[[window]]
+    // 窗口标题内容 window.title
+    // "window.title": "${dirty} ${rootName}${separator}${activeEditorShort}",
+    "window.title": "${dirty} ${rootName}${separator}${activeEditorMedium}",
+    // 窗口标题位置的命令中心 window.commandCenter
+    "window.commandCenter": false,
+    // 窗口禁止alt激活菜单栏 window.customMenuBarAltFocus
+    "window.customMenuBarAltFocus": false,
+    //**************************************************************************//
+    //[[files]]
+    // 猜测文件编码 files.autoGuessEncoding
+    "files.autoGuessEncoding": true,
+    // 在文件末尾插入换行符 files.insertFinalNewline
+    "files.insertFinalNewline": true,
+    // 自动删除文件每一行的行尾空格 files.trimTrailingWhitespace
+    "files.trimTrailingWhitespace": true,
+    // 自动删除文件末尾的空行 files.trimFinalNewlines
+    "files.trimFinalNewlines": true,
+    // 文件自动保存 files.autoSave
+    "files.autoSave": "onFocusChange",
+    // 文件后缀关联 files.associations
+    "files.associations": {
+        "*.cmake.in": "cmake",
+        "*.h.in": "cpp",
+        ".clang-tidy": "plaintext",
+        "mconfig": "ini",
+        "*.conf": "ini"
+    },
+    //**************************************************************************//
+    //[[editor]]
+    // 默认字体 editor.fontFamily
+    "editor.fontFamily": "Cascadia Mono,'Courier New', monospace",
+    // 默认字体大小
+    "editor.fontSize": 16,
+    // 是否使用连字符 editor.fontLigatures
+    "editor.fontLigatures": false,
+    // 显示行号 editor.lineNumbers
+    "editor.lineNumbers": "on",
+    // 关于tab的宽度以及是否替换为空格，还有一个选项会基于文件内容自动推断，这个选项默认开启
+    // 显示tab的宽度 editor.tabSize
+    "editor.tabSize": 4,
+    // 输入tab时自动替换为空格 editor.insertSpaces
+    "editor.insertSpaces": true,
+    // 渲染空格字符(选中部分) editor.renderWhitespace
+    "editor.renderWhitespace": "selection",
+    "editor.renderControlCharacters": true,
+    // 是否高亮显示非ACSII字符 editor.unicodeHighlight.nonBasicASCII
+    "editor.unicodeHighlight.nonBasicASCII": "inUntrustedWorkspace",
+    // 关于高亮非ASCII字符的设置 editor.unicodeHighlight.invisibleCharacters
+    "editor.unicodeHighlight.invisibleCharacters": true,
+    // 括号采用彩色展示配对关系，可以在别的选项指定颜色 editor.bracketPairColorization.enabled
+    "editor.bracketPairColorization.enabled": true,
+    // 对当前的括号显示结构框 editor.guides.bracketPairs
+    "editor.guides.bracketPairs": "active",
+    // minimap的最大宽度 editor.minimap.maxColumn
+    "editor.minimap.maxColumn": 80,
+    // minimap的自动隐藏 editor.minimap.autohide
+    "editor.minimap.autohide": true,
+    // minimap的尺寸 editor.minimap.scale
+    "editor.minimap.scale": 2,
+    // minimap渲染字符而非简单的色块 editor.minimap.renderCharacters
+    "editor.minimap.renderCharacters": true,
+    // 关闭嵌套提示 editor.inlayHints.enabled
+    "editor.inlayHints.enabled": "off",
+    // diff的耗时上限 diffEditor.maxComputationTime
+    "diffEditor.maxComputationTime": 0,
+    //**************************************************************************//
+    // [[editorconfig]]
+    // normal
+    // 文件编码 files.encoding
+    "files.encoding": "utf8",
+    // 文件换行符 files.eol
+    "files.eol": "\n",
+    // for special file
+    "[makefile]": {
+        "editor.insertSpaces": false
+    },
+    "[bat]": {
+        "files.eol": "\r\n",
+    },
+    "[powershell]": {
+        "files.eol": "\r\n",
+    },
+    "[markdown]": {
+        "editor.unicodeHighlight.ambiguousCharacters": false,
+        "editor.unicodeHighlight.invisibleCharacters": false,
+        "diffEditor.ignoreTrimWhitespace": false,
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": {
+            "comments": "off",
+            "strings": "off",
+            "other": "off"
+        },
+        "files.trimTrailingWhitespace": false,
+    },
+    //**************************************************************************//
+    //[[workbench]]
+    // 在没有从上一会话中恢复出信息的情况下，启动时的行为 workbench.startupEditor
+    "workbench.startupEditor": "none",
+    // 图标主题，由插件提供 workbench.iconTheme
+    "workbench.iconTheme": "material-icon-theme",
+    // 文件关联 workbench.editorAssociations
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook",
+        "*.pdf": "latex-workshop-pdf-hook",
+        "*.exe": "default"
+    },
+    // 括号颜色自定义 workbench.colorCustomizations
+    "workbench.colorCustomizations": {
+        // 当前行的颜色
+        // "editor.lineHighlightBackground": "#00000090",
+        // "editor.lineHighlightBorder": "#ffd700",
+        // 编辑器的颜色
+        "editorBracketHighlight.foreground1": "#ffd700",
+        "editorBracketHighlight.foreground2": "#da70d6",
+        "editorBracketHighlight.foreground3": "#87cefa",
+        "editorBracketHighlight.foreground4": "#ffd700",
+        "editorBracketHighlight.foreground5": "#da70d6",
+        "editorBracketHighlight.foreground6": "#87cefa",
+        "editorBracketHighlight.unexpectedBracket.foreground": "#E31A1C",
+        // "terminal.background": "#283033",
+        "terminal.foreground": "#B7B8B9",
+        "terminalCursor.background": "#B7B8B9",
+        "terminalCursor.foreground": "#FFFFFF",
+        "terminal.ansiBlack": "#000000",
+        "terminal.ansiBlue": "#5AC8FA",
+        "terminal.ansiBrightBlack": "#666666",
+        "terminal.ansiBrightBlue": "#5AC8FA",
+        "terminal.ansiBrightCyan": "#78B6E9",
+        "terminal.ansiBrightGreen": "#4CD964",
+        "terminal.ansiBrightMagenta": "#756BB1",
+        "terminal.ansiBrightRed": "#E06C75",
+        "terminal.ansiBrightWhite": "#FFFFFF",
+        "terminal.ansiBrightYellow": "#E5C07B",
+        "terminal.ansiCyan": "#78B6E9",
+        "terminal.ansiGreen": "#4CD964",
+        "terminal.ansiMagenta": "#756BB1",
+        "terminal.ansiRed": "#E06C75",
+        "terminal.ansiWhite": "#FFFFFF",
+        "terminal.ansiYellow": "#E5C07B"
+    },
+    // UNKNOWN workbench.editor.empty.hint
+    "workbench.editor.empty.hint": "text",
+    // 移动不需要确认 explorer.confirmDragAndDrop
+    "explorer.confirmDragAndDrop": false,
+    // 不展示紧凑的文件夹 explorer.compactFolders
+    "explorer.compactFolders": false,
+    // 复制相对路径时采用的/分隔符 explorer.copyRelativePathSeparator
+    "explorer.copyRelativePathSeparator": "/",
+    // 文件操作允许撤销 explorer.enableUndo
+    "explorer.enableUndo": true,
+    // 终端关于链接的设置 terminal.integrated.cursorBlinking
+    "terminal.integrated.cursorBlinking": true,
+    // 终端关于右键单击的设置 terminal.integrated.rightClickBehavior
+    "terminal.integrated.rightClickBehavior": "default",
+    // 终端字体 terminal.integrated.fontFamily
+    "terminal.integrated.fontFamily": "MesloLGM Nerd Font",
+    // 终端字号 terminal.integrated.fontSize
+    "terminal.integrated.fontSize": 16,
+    // 默认打开的终端方案 terminal.integrated.defaultProfile.windows
+    "terminal.integrated.defaultProfile.windows": "Pwsh",
+    // 终端采用GPU加速 terminal.integrated.gpuAcceleration
+    "terminal.integrated.gpuAcceleration": "on",
+    // 终端每一行前面加一个提示圆圈 terminal.integrated.shellIntegration.decorationsEnabled
+    "terminal.integrated.shellIntegration.decorationsEnabled": "never",
+    // 终端不使用 tab terminal.integrated.tabs.enabled
+    "terminal.integrated.tabs.enabled": false,
+    // 终端方案 terminal.integrated.profiles.windows
+    "terminal.integrated.profiles.windows": {
+        "Pwsh": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell",
+            "args": [
+                "-NoLogo"
+            ],
+            "color": "terminal.ansiWhite"
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}/Sysnative/cmd.exe",
+                "${env:windir}/System32/cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd",
+            "color": "terminal.ansiCyan"
+        },
+        "Git Bash": {
+            "source": "Git Bash"
+        },
+        "Pwsh(No Profile)": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell",
+            "args": [
+                "-NoLogo",
+                "-NoProfile"
+            ],
+            "color": "terminal.ansiGreen"
+        },
+        "Windows PowerShell": {
+            "path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+        }
+    },
+    //**************************************************************************//
+    //[[git]]
+    // "git.autofetch": true,
+    // "git.enableSmartCommit": true,
+    // "gitlens.currentLine.pullRequests.enabled": false,
+    // "gitlens.currentLine.enabled": false,
+    // "gitlens.hovers.currentLine.over": "line",
+    // "gitlens.codeLens.enabled": false,
+    // "gitlens.hovers.enabled": false,
+    //**************************************************************************//
+    //[[C++]]
+    // 关闭默认C/C++插件的格式化 C_Cpp.formatting
+    "C_Cpp.formatting": "disabled",
+    // 关闭默认C/C++插件的智能提示 C_Cpp.intelliSenseEngine
+    "C_Cpp.intelliSenseEngine": "disabled",
+    // 关闭默认C/C++插件的自动补全 C_Cpp.autocomplete
+    "C_Cpp.autocomplete": "disabled",
+    // 关闭默认C/C++插件的错误曲线 C_Cpp.errorSquiggles
+    "C_Cpp.errorSquiggles": "disabled",
+    // 关闭默认C/C++插件的自动代码分析 C_Cpp.codeAnalysis.runAutomatically
+    "C_Cpp.codeAnalysis.runAutomatically": false,
+    // C/C++的默认配置由cmaketools提供 C_Cpp.default.configurationProvider
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+    // clangd的分析参数 clangd.arguments
+    "clangd.arguments": [
+        "--completion-style=detailed",
+        "--clang-tidy",
+        "--background-index",
+        "--enable-config",
+        "--header-insertion=never",
+        "--header-insertion-decorators",
+        "--fallback-style=LLVM"
+        // "--fallback-style=WebKit" 4缩进
+    ],
+    // clangd在没有找到编译指令文件时基于如下编译指令进行静态分析 clangd.fallbackFlags
+    "clangd.fallbackFlags": [
+        "-I${workspaceFolder}",
+        "-I${workspaceFolder}/include",
+        "-std=c++17",
+        "-fsanitize=address",
+        "-fsanitize=undefined",
+        "-Wall",
+        "-Wextra",
+        "-Wshadow",
+        "-Wfatal-errors",
+        "-Wno-unused-variable",
+        "-Wno-unused-parameter",
+    ],
+    // clangd自动检测插件冲突 clangd.detectExtensionConflicts
+    "clangd.detectExtensionConflicts": true,
+    //**************************************************************************//
+    //[[launch]]
+    // 默认的launch设置，搭配cmake和gdb/lldb使用，不需要单独的launch.json
+    "launch": {
+        "configurations": [
+            {
+                "name": "(lldb) Launch",
+                "type": "lldb",
+                "request": "launch",
+                "program": "${command:cmake.launchTargetPath}",
+                "args": [],
+                "cwd": "${workspaceFolder}",
+                "console": "integratedTerminal",
+            },
+            {
+                "name": "(gdb) Launch",
+                "type": "cppdbg",
+                "request": "launch",
+                "program": "${command:cmake.launchTargetPath}",
+                "args": [],
+                "stopAtEntry": false,
+                "cwd": "${workspaceFolder}",
+                "environment": [
+                    {
+                        "name": "PATH",
+                        "value": "${env:PATH}:${command:cmake.getLaunchTargetDirectory}"
+                    }
+                ],
+                "externalConsole": false,
+                "MIMode": "gdb",
+                "setupCommands": [
+                    {
+                        "description": "Enable pretty-printing for gdb",
+                        "text": "-enable-pretty-printing",
+                        "ignoreFailures": true
+                    }
+                ],
+                "miDebuggerArgs": "-q -ex quit; wait() { fg >/dev/null; }; /usr/bin/gdb -q --interpreter=mi"
+            },
+            {
+                "name": "(cppvsdbg) Launch",
+                "type": "cppvsdbg",
+                "request": "launch",
+                "program": "${command:cmake.launchTargetPath}",
+                "args": [],
+                "stopAtEntry": false,
+                "cwd": "${workspaceFolder}",
+                "environment": [
+                    {
+                        "name": "PATH",
+                        "value": "${env:PATH}:${command:cmake.getLaunchTargetDirectory}"
+                    }
+                ],
+                "console": "externalTerminal"
+            }
+        ],
+        "compounds": []
+    },
+    //**************************************************************************//
+    //[[cmake]]
+    // cmake关闭自动配置 cmake.autoSelectActiveFolder
+    "cmake.autoSelectActiveFolder": false,
+    // cmake关闭在打开时自动配置 cmake.configureOnOpen
+    "cmake.configureOnOpen": false,
+    // cmake关闭在编辑时自动配置 cmake.configureOnEdit
+    "cmake.configureOnEdit": false,
+    // cmake总是向output输出日志 cmake.revealLog
+    "cmake.revealLog": "always",
+    // cmake底部状态栏的细节设置(去掉了debug按钮) cmake.statusbar.advanced
+    "cmake.statusbar.advanced": {
+        "status": {
+            "visibility": "compact"
+        },
+        "kit": {
+            "length": 20,
+            "visibility": "compact"
+        },
+        "debug": {
+            "visibility": "hidden"
+        },
+    },
+    //**************************************************************************//
+    //[[Python]]
+    // 设置python不会自动激活环境 python.terminal.activateEnvironment
+    "python.terminal.activateEnvironment": false,
+    // python使用pylance提供语言服务 python.languageServer
+    "python.languageServer": "Pylance",
+    // python代码分析的模式 python.analysis.typeCheckingMode
+    "python.analysis.typeCheckingMode": "basic",
+    // python定制的编译器设置
+    "[python]": {
+        "editor.formatOnType": true,
+        "editor.defaultFormatter": "ms-python.black-formatter",
+    },
+    // python格式化基于black(需要单独vscode插件以及conda下载对应模块)
+    // python静态分析基于flake8(需要单独vscode插件以及conda下载对应模块)
+    // flake8静态分析的设置 flake8.severity
+    "flake8.severity": {
+        "E": "Hint",
+        "F": "Warning"
+    },
+    //**************************************************************************//
+    // [[jupyter]]
+    // jupyter自动重启内核 jupyter.askForKernelRestart
+    "jupyter.askForKernelRestart": false,
+    // notebook的布局设置 notebook.cellToolbarLocation
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "right"
+    },
+    // notebook字体大小 notebook.markup.fontSize
+    "notebook.markup.fontSize": 16,
+    // notebook输出上限 notebook.output.textLineLimit
+    "notebook.output.textLineLimit": 50,
+    // notebook输出超限滚动 notebook.output.scrolling
+    "notebook.output.scrolling": true,
+    // notebook使用行号 notebook.lineNumbers
+    "notebook.lineNumbers": "on",
+    //**************************************************************************//
+    // [[latex-workshop]]
+    // latex基本工具链 latex-workshop.latex.tools
+    "latex-workshop.latex.tools": [
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1", // enable synctex
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "-outdir=%OUTDIR%",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ]
+        }
+    ],
+    // latex组合工具链 latex-workshop.latex.recipes
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "xelatex->xelatex",
+            "tools": [
+                "xelatex",
+                "xelatex",
+            ],
+        },
+        {
+            "name": "xelatex",
+            "tools": [
+                "xelatex"
+            ],
+        },
+        {
+            "name": "pdflatex",
+            "tools": [
+                "pdflatex"
+            ]
+        },
+        {
+            "name": "LaTeXmk",
+            "tools": [
+                "latexmk"
+            ]
+        },
+        {
+            "name": "BibTeX",
+            "tools": [
+                "bibtex"
+            ]
+        },
+        {
+            "name": "xe->bib->xe*2",
+            "tools": [
+                "xelatex",
+                "bibtex",
+                "xelatex",
+                "xelatex"
+            ]
+        },
+        {
+            "name": "pdf->bib->pdf*2",
+            "tools": [
+                "pdflatex",
+                "bibtex",
+                "pdflatex",
+                "pdflatex"
+            ]
+        }
+    ],
+    // latex自动清理文件 latex-workshop.latex.clean.fileTypes
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux",
+        "*.bbl",
+        "*.blg",
+        "*.idx",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.out",
+        "*.toc",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.ist",
+        "*.fls",
+        "*.log",
+        "*.fdb_latexmk",
+        "*.upa",
+        "*.upb"
+        //do not delete *.gz
+    ],
+    // 关闭自动编译行为 latex-workshop.latex.autoBuild.run
+    "latex-workshop.latex.autoBuild.run": "never",
+    // 右键菜单设置 latex-workshop.showContextMenu
+    "latex-workshop.showContextMenu": true,
+    // 从使用的包中自动补全命令和环境 latex-workshop.intellisense.package.enabled
+    "latex-workshop.intellisense.package.enabled": true,
+    // 编译出错时展示 latex-workshop.message.error.show
+    "latex-workshop.message.error.show": true,
+    // 编译警告时不展示 latex-workshop.message.warning.show
+    "latex-workshop.message.warning.show": false,
+    // 在构建后onBuild清除辅助文件 latex-workshop.latex.autoClean.run
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    // 使用上次的recipe
+    "latex-workshop.latex.recipe.default": "lastUsed",
+    // 用于反向同步的内部查看器的键绑定 ctrl/cmd +点击(默认)或双击 latex-workshop.view.pdf.internal.synctex.keybinding
+    "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
+    // 设置VScode内部查看生成的pdf文件 latex-workshop.view.pdf.viewer
+    "latex-workshop.view.pdf.viewer": "tab",
+    // PDF查看器用于在\ref上的[View on PDF]链接 latex-workshop.view.pdf.ref.viewer
+    "latex-workshop.view.pdf.ref.viewer": "auto",
+    // latex指定格式化工具
+    "[latex]": {
+        "editor.defaultFormatter": "James-Yu.latex-workshop",
+        "editor.unicodeHighlight.allowedLocales": {
+            "zh-hans": true
+        },
+    },
+    //**************************************************************************//
+    // others
+    // 忽略插件推荐 extensions.ignoreRecommendations
+    "extensions.ignoreRecommendations": true,
+    // 搜索结果是否折叠 search.collapseResults
+    "search.collapseResults": "auto",
+    // workplace信任设置 security.workspace.trust.enabled
+    "security.workspace.trust.enabled": false,
+    // 禁止下载json schema json.schemaDownload.enable
+    "json.schemaDownload.enable": false,
+    // jsonc设置
+    "[jsonc]": {
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.suggest.insertMode": "replace",
+    },
+    "[html]": {
+        "editor.suggest.insertMode": "replace",
+        "editor.formatOnType": true
+    },
+    "errorLens.followCursor": "allLinesExceptActive",
+    "errorLens.errorGutterIconColor": "#c05959",
+    "errorLens.warningGutterIconColor": "#ffdfa3",
+    "errorLens.delay": 5000,
+    "errorLens.delayMode": "debounce",
+    "projectManager.sortList": "Name",
+    "errorLens.fontStyleItalic": true,
+    "errorLens.margin": "6ch",
+    "explorer.confirmDelete": false,
+    //**************************************************************************//
+    // 2023年10月9日
+}
