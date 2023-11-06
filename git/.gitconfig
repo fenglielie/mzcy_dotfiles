@@ -2,6 +2,20 @@
 	name = fenglielie
 	email = fenglielie@qq.com
 [init]
+	# 默认主分支名称
 	defaultBranch = main
 [core]
+	# 默认编辑器
 	editor = vim
+	# 确保git正确显示中文信息
+	quotepath = false
+	# 在提交时将所有文本的换行符转换为LF，检出时不转换
+	autocrlf = input
+	# 检查文本的换行符，对于混合换行符的文件不允许提交
+	safecrlf = true
+[i18n]
+	# 确保提交信息utf-8编码
+	commitEncoding = utf-8
+[gui]
+	# 确保gui使用utf-8编码
+	encoding = utf-8
