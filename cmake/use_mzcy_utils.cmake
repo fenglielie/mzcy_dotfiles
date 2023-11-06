@@ -6,9 +6,9 @@ include(cmake/mzcy_utils.cmake OPTIONAL RESULT_VARIABLE RES)
 
 if(${RES} STREQUAL "NOTFOUND")
     message("mzcy_utils.cmake was not found")
-    message("download from https://fenglielie.top   -- start")
+    message("download from github   -- start")
 
-    file(DOWNLOAD "https://fenglielie.top/files/mzcy_utils-remote.cmake"
+    file(DOWNLOAD "https://raw.github.com/fenglielie/mzcy_dotfiles/blob/main/cmake/mzcy_utils.cmake"
         ${PROJECT_SOURCE_DIR}/cmake/mzcy_utils-tmp.cmake
         HTTPHEADER "User-Agent: Mozilla/5.0"
         STATUS status LOG log)
