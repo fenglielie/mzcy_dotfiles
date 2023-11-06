@@ -1,0 +1,63 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "version": 2,
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "path",
+          "style": "plain",
+          "foreground": "#91ddff",
+          "template": "{{ if .RootDir }}{{ .Location }} {{ else }}{{ .Path }}{{ end }}",
+          "properties": {
+            "folder_icon": "**",
+            "folder_separator_icon": "/",
+            "style": "mixed",
+            "mixed_threshold": 15
+          }
+        },
+        {
+          "type": "python",
+          "style": "plain",
+          "foreground": "#906cff",
+          "template": "{{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}({{ .Venv }}){{ end }}{{ end }}",
+          "properties": {
+            "display_mode": "context"
+          }
+        },
+        {
+          "type": "executiontime",
+          "style": "plain",
+          "foreground": "#f17c37",
+          "template": "\uf017 {{ .FormattedMs }}",
+          "properties": {
+            "always_enabled": false,
+            "profix": "",
+            "threshold": 1000
+          }
+        },
+        {
+          "type": "status",
+          "style": "plain",
+          "foreground": "#00df7b",
+          "foreground_templates": [
+            "{{ if .Error }}#ff8080{{ end }}"
+          ],
+          "template": "{{ if eq .Code 0 }}\uf00c {{ else }}\ue20f {{ reason .Code }}{{ end }}",
+          "properties": {
+            "always_enabled": false
+          }
+        },
+        {
+          "foreground": "#95ffa4",
+          "style": "plain",
+          "template": "\u276f",
+          "type": "text"
+        }
+      ]
+    }
+  ],
+  "final_space": true
+}
