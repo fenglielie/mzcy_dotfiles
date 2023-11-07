@@ -35,6 +35,14 @@ else()
     set(common_flags "")
 endif()
 
+# link rpath
+if (("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU") OR ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang"))
+   if(DEFINED ENV{MY_RPATH})
+       message("USE MY_RPATH")
+       set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,-rpath -Wl,$ENV{MY_RPATH}")
+   endif()
+endif()
+
 # empty
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${common_flags}")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${common_flags}")
