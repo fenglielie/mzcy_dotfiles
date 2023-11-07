@@ -258,7 +258,7 @@
     "launch": {
         "configurations": [
             {
-                "name": "(lldb) Launch",
+                "name": "lldb(CMake)",
                 "type": "lldb",
                 "request": "launch",
                 "program": "${command:cmake.launchTargetPath}",
@@ -267,7 +267,16 @@
                 "console": "integratedTerminal",
             },
             {
-                "name": "(gdb) Launch",
+                "name": "lldb(No CMake)",
+                "type": "lldb",
+                "request": "launch",
+                "program": "${input:debug_exe_name}",
+                "args": [],
+                "cwd": "${workspaceFolder}",
+                "console": "integratedTerminal",
+            },
+            {
+                "name": "gdb(CMake)",
                 "type": "cppdbg",
                 "request": "launch",
                 "program": "${command:cmake.launchTargetPath}",
@@ -292,7 +301,26 @@
                 "miDebuggerArgs": "-q -ex quit; wait() { fg >/dev/null; }; /usr/bin/gdb -q --interpreter=mi"
             },
             {
-                "name": "(cppvsdbg) Launch",
+                "name": "gdb(No CMake)",
+                "type": "cppdbg",
+                "request": "launch",
+                "program": "${input:debug_exe_name}",
+                "args": [],
+                "stopAtEntry": false,
+                "cwd": "${workspaceFolder}",
+                "externalConsole": false,
+                "MIMode": "gdb",
+                "setupCommands": [
+                    {
+                        "description": "Enable pretty-printing for gdb",
+                        "text": "-enable-pretty-printing",
+                        "ignoreFailures": true
+                    }
+                ],
+                "miDebuggerArgs": "-q -ex quit; wait() { fg >/dev/null; }; /usr/bin/gdb -q --interpreter=mi"
+            },
+            {
+                "name": "vsdbg(CMake)",
                 "type": "cppvsdbg",
                 "request": "launch",
                 "program": "${command:cmake.launchTargetPath}",
@@ -308,7 +336,15 @@
                 "console": "externalTerminal"
             }
         ],
-        "compounds": []
+        "compounds": [],
+        "inputs": [
+            {
+                "id": "debug_exe_name",
+                "type": "promptString",
+                "description": "debug exe name",
+                "default": "${workspaceFolder}/a.out"
+            }
+        ],
     },
     //**************************************************************************//
     //[[cmake]]
@@ -548,6 +584,9 @@
     "errorLens.fontStyleItalic": true,
     "errorLens.margin": "6ch",
     "explorer.confirmDelete": false,
+    "remote.SSH.remotePlatform": {
+        "tc": "linux"
+    },
     //**************************************************************************//
     // 2023年10月9日
 }
