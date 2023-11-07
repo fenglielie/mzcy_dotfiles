@@ -78,10 +78,10 @@
         "editor.insertSpaces": false
     },
     "[bat]": {
-        "files.eol": "\r\n",
+        "files.eol": "\r\n"
     },
     "[powershell]": {
-        "files.eol": "\r\n",
+        "files.eol": "\r\n"
     },
     "[markdown]": {
         "editor.unicodeHighlight.ambiguousCharacters": false,
@@ -93,7 +93,7 @@
             "strings": "off",
             "other": "off"
         },
-        "files.trimTrailingWhitespace": false,
+        "files.trimTrailingWhitespace": false
     },
     //**************************************************************************//
     //[[workbench]]
@@ -248,7 +248,7 @@
         "-Wshadow",
         "-Wfatal-errors",
         "-Wno-unused-variable",
-        "-Wno-unused-parameter",
+        "-Wno-unused-parameter"
     ],
     // clangd自动检测插件冲突 clangd.detectExtensionConflicts
     "clangd.detectExtensionConflicts": true,
@@ -264,7 +264,7 @@
                 "program": "${command:cmake.launchTargetPath}",
                 "args": [],
                 "cwd": "${workspaceFolder}",
-                "console": "integratedTerminal",
+                "console": "integratedTerminal"
             },
             {
                 "name": "lldb(No CMake)",
@@ -273,7 +273,7 @@
                 "program": "${input:debug_exe_name}",
                 "args": [],
                 "cwd": "${workspaceFolder}",
-                "console": "integratedTerminal",
+                "console": "integratedTerminal"
             },
             {
                 "name": "gdb(CMake)",
@@ -344,7 +344,7 @@
                 "description": "debug exe name",
                 "default": "${workspaceFolder}/a.out"
             }
-        ],
+        ]
     },
     //**************************************************************************//
     //[[cmake]]
@@ -367,7 +367,7 @@
         },
         "debug": {
             "visibility": "hidden"
-        },
+        }
     },
     //**************************************************************************//
     //[[Python]]
@@ -380,7 +380,7 @@
     // python定制的编译器设置
     "[python]": {
         "editor.formatOnType": true,
-        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.defaultFormatter": "ms-python.black-formatter"
     },
     // python格式化基于black(需要单独vscode插件以及conda下载对应模块)
     // python静态分析基于flake8(需要单独vscode插件以及conda下载对应模块)
@@ -456,14 +456,14 @@
             "name": "xelatex->xelatex",
             "tools": [
                 "xelatex",
-                "xelatex",
-            ],
+                "xelatex"
+            ]
         },
         {
             "name": "xelatex",
             "tools": [
                 "xelatex"
-            ],
+            ]
         },
         {
             "name": "pdflatex",
@@ -552,7 +552,7 @@
         "editor.defaultFormatter": "James-Yu.latex-workshop",
         "editor.unicodeHighlight.allowedLocales": {
             "zh-hans": true
-        },
+        }
     },
     //**************************************************************************//
     // others
@@ -569,7 +569,7 @@
         "editor.quickSuggestions": {
             "strings": true
         },
-        "editor.suggest.insertMode": "replace",
+        "editor.suggest.insertMode": "replace"
     },
     "[html]": {
         "editor.suggest.insertMode": "replace",
@@ -585,8 +585,9 @@
     "errorLens.margin": "6ch",
     "explorer.confirmDelete": false,
     "remote.SSH.remotePlatform": {
-        "tc": "linux"
-    },
+        "tc": "linux",
+        "ustc": "linux"
+    }
     //**************************************************************************//
     // 2023年10月9日
 }
