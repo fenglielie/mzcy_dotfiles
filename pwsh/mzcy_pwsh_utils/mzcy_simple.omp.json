@@ -1,11 +1,23 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "version": 2,
+  "console_title_template": "{{.Shell}} {{.PWD}}",
   "blocks": [
     {
       "type": "prompt",
       "alignment": "left",
       "segments": [
+        {
+          "type": "executiontime",
+          "style": "plain",
+          "foreground": "#D4F107",
+          "template": "\uf017 {{ .FormattedMs }} ",
+          "properties": {
+            "always_enabled": false,
+            "profix": "",
+            "threshold": 2000
+          }
+        },
         {
           "type": "path",
           "style": "plain",
@@ -19,23 +31,12 @@
           }
         },
         {
-          "type": "python",
+          "foreground": "#C2C206",
           "style": "plain",
-          "foreground": "#906cff",
-          "template": "{{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}({{ .Venv }}){{ end }}{{ end }}",
+          "template": " ({{ .HEAD }})",
+          "type": "git",
           "properties": {
-            "display_mode": "context"
-          }
-        },
-        {
-          "type": "executiontime",
-          "style": "plain",
-          "foreground": "#D4F107",
-          "template": "\uf017 {{ .FormattedMs }}",
-          "properties": {
-            "always_enabled": false,
-            "profix": "",
-            "threshold": 1000
+            "branch_icon": ""
           }
         },
         {
@@ -45,7 +46,7 @@
           "foreground_templates": [
             "{{ if .Error }}#ff8080{{ end }}"
           ],
-          "template": "{{ if eq .Code 0 }}\uf00c {{ else }}\ue20f {{ reason .Code }}{{ end }}",
+          "template": "{{ if eq .Code 0 }}{{ else }} [{{ .Code }}]{{ end }}",
           "properties": {
             "always_enabled": false
           }
@@ -53,11 +54,25 @@
         {
           "foreground": "#95ffa4",
           "style": "plain",
-          "template": "\u276f",
+          "template": "\u276f ",
           "type": "text"
         }
       ]
+    },
+    {
+      "type": "rprompt",
+      "alignment": "right",
+      "segments": [
+        {
+          "type": "python",
+          "style": "plain",
+          "foreground": "#906cff",
+          "template": "{{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}({{ .Venv }}){{ end }}{{ end }}",
+          "properties": {
+            "display_mode": "context"
+          }
+        }
+      ]
     }
-  ],
-  "final_space": true
+  ]
 }
