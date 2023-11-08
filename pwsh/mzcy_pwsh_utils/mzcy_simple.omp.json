@@ -30,7 +30,7 @@
         {
           "type": "executiontime",
           "style": "plain",
-          "foreground": "#f17c37",
+          "foreground": "#D4F107",
           "template": "\uf017 {{ .FormattedMs }}",
           "properties": {
             "always_enabled": false,
