@@ -14,3 +14,7 @@ echo "vim config finished."
 # git
 ln -sf $script_root_dir/git/.gitconfig $HOME/.gitconfig
 echo "git config finished."
+
+# fish
+ln -sf $script_root_dir/fish $HOME/.config/fish
+echo "fish config finished."
