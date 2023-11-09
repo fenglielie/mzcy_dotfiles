@@ -13,8 +13,12 @@
 * tmux: 配置文件.tmux.conf
 * vim: 配置文件.vimrc
 * git: 配置文件.gitconfig
+* fish: 配置文件目录~/.config/fish/
 
 使用`config_home.sh`或者`config_home.ps1`，建立相应的软链接。
+
+注意：`ln -sf a b`创建软链接b指向a，如果b是一个已经存在的文件，会被`-f`选项覆盖；如果b是一个已经存在的文件夹，则会在b/创建一个指向a的名称仍然为b的软链接，这在fish配置整个文件夹时要注意。
+
 
 ## ProjectRoot(Linux/Win)
 
