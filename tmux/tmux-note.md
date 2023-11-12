@@ -1,6 +1,18 @@
 # tmux笔记
 
+
+- [tmux笔记](#tmux笔记)
+  - [基本概念](#基本概念)
+  - [创建session](#创建session)
+  - [进入session](#进入session)
+  - [脱离session](#脱离session)
+  - [创建window](#创建window)
+  - [拆分window（创建pane）](#拆分window创建pane)
+  - [删除session/window/pane](#删除sessionwindowpane)
+  - [其他指令](#其他指令)
+
 > 这并不是一个完整的tmux学习笔记，只是非常简要的笔记和速查手册，完整内容还是直接看[tmux Github文档](https://github.com/tmux/tmux/wiki/Getting-Started)
+
 
 ## 基本概念
 
@@ -32,14 +44,14 @@ tmux在逻辑上存在三层概念: session（会话）> window（窗口）> pan
 * 可以使用命令输入具体tmux指令，也可以使用快捷键，tmux的快捷键都需要使用一个固定前缀触发，默认前缀`prefix=ctrl+b`，可以修改为其他前缀，例如`ctrl+\`
 * 不同设备同时打开一个session，即多个client连接到同一个session，可能会因为屏幕尺寸不同，出现显示错误
 * 可以像vim一样，在`prefix`之后使用`:`然后键入指令，此时的指令不再需要输入`tmux`
-  
+
 
 
 ## 创建session
 
 使用`new-session`可以创建session，默认索引作为名称，也可以自定义名称，通常用`new`作为`new-session`的简写，`-s`通常是session名称选项
 ```
-tmux new   
+tmux new
 tmux new -s session_name
 ```
 注意session的名称不能重复，使用`-A`选项在不存在时自动创建，在已存在时自动进入
@@ -54,7 +66,7 @@ tmux new [command]
 
 创建session之后，可以指定window名称
 ```
-tmux new -s session_name -n window_name 
+tmux new -s session_name -n window_name
 ```
 
 创建session可以直接挂到后台，而非自动attach到session
@@ -163,7 +175,4 @@ tmux kill-pane
     * 快捷键`prefix+w` 默认展开所有项
     * 快捷键`prefix+s` 默认只呈现session层信息，可以使用左右键展开或收起不同的层
   * 查询并移动到树的指定位置，然后回车即可完成切换；或者使用`q`撤销切换
-  * 使用`x`可以删除指定的项，需要`y`确认 
-
-
- 
+  * 使用`x`可以删除指定的项，需要`y`确认

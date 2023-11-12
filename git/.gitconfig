@@ -19,3 +19,5 @@
 [gui]
 	# 确保gui使用utf-8编码
 	encoding = utf-8
+[alias]
+	trace = log --oneline --all --graph

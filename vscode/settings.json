@@ -86,14 +86,15 @@
     "[markdown]": {
         "editor.unicodeHighlight.ambiguousCharacters": false,
         "editor.unicodeHighlight.invisibleCharacters": false,
-        "diffEditor.ignoreTrimWhitespace": false,
+        "diffEditor.ignoreTrimWhitespace": true,
         "editor.wordWrap": "on",
         "editor.quickSuggestions": {
             "comments": "off",
             "strings": "off",
             "other": "off"
         },
-        "files.trimTrailingWhitespace": false
+        "files.trimTrailingWhitespace": true,
+        "editor.minimap.enabled": false
     },
     //**************************************************************************//
     //[[workbench]]
@@ -588,6 +589,8 @@
         "tc": "linux",
         "ustc": "linux"
     },
+    "markdown-preview-github-styles.darkTheme": "light",
+    "markdown-preview-enhanced.alwaysShowBacklinksInPreview": false,
     //**************************************************************************//
     // 2023年10月9日
 }

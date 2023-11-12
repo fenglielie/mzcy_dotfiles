@@ -11,8 +11,8 @@
 在HOME目录下的若干配置文件，包括：
 
 * tmux: 配置文件.tmux.conf [tmux-note](./tmux/tmux-note.md)
-* vim: 配置文件.vimrc [vim-note](./vim/vim-note.md)
-* git: 配置文件.gitconfig [git-note](./git/git-note.md)
+* vim: 配置文件.vimrc
+* git: 配置文件.gitconfig [git-note-1](./git/git-note-1.md)  [git-note-2](./git/git-note-2.md)
 * fish: 配置文件目录~/.config/fish/
 
 使用`config_home.sh`或者`config_home.ps1`，建立相应的软链接。

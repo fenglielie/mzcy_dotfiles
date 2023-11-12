@@ -31,7 +31,7 @@
           }
         },
         {
-          "foreground": "#C2C206",
+          "foreground": "#FFFFFF",
           "style": "plain",
           "template": " ({{ .HEAD }})",
           "type": "git",
