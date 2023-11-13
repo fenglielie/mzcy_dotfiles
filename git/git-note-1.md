@@ -105,7 +105,8 @@ git clone https://github.com/libgit2/libgit2 mylibgit
 2. `git init`初始化一个空的Git仓库
 3. 根据URL添加一个（默认命名为origin）远程仓库（`git remote add`）
 4. 对远程仓库执行`git fetch`获取远程仓库的内容
-5. 执行`git checkout`将远程仓库的最新提交检出到本地的工作目录。
+5. 在本地创建与远程仓库的分支同名的本地分支，并将同名分支分别绑定
+6. 执行`git checkout`将远程仓库的最新提交检出到本地的工作目录。
 
 如果克隆的仓库过大，考虑网络原因，可以舍弃git的历史数据，使用`--depth 1`选项只会获取最新的提交版本。
 
