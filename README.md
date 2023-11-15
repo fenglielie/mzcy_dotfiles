@@ -1,4 +1,4 @@
-# README
+# mzcy_dotfiles
 
 这是个人使用的用于同步各个平台的各种配置文件的仓库，同时附带简要的配置解释和命令速查笔记。
 
@@ -39,10 +39,3 @@
 ## Pwsh(Windows)
 
 一个自定义的pwsh模块，以及pwsh启动脚本，使用`config_pwsh.ps1`建立相应的软链接。
-
-
-## VSCode(Windows)
-
-包括settings.json以及keybindings.json，使用`config_code.ps1`建立相应的软链接。
-
-在`backup/`中还有额外的vscode配置导出备份。
