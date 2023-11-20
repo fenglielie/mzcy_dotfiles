@@ -39,6 +39,7 @@ modernize-*,
 mpi-*,
 performance-*,
 -performance-unnecessary-value-param,
+-performance-avoid-endl,
 readability-*,
 readability-identifier-naming,
 -readability-braces-around-statements,
@@ -83,4 +84,3 @@ CheckOptions:
   - {key: readability-function-cognitive-complexity.Threshold, value: 40}
   - {key: cppcoreguidelines-avoid-do-while.IgnoreMacros, value: true}
   - {key: hicpp-signed-bitwise.IgnorePositiveIntegerLiterals, value: true}
-
