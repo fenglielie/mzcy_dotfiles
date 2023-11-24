@@ -21,3 +21,5 @@
 	encoding = utf-8
 [alias]
 	trace = log --oneline --all --graph
+[credential "https://latex.ustc.edu.cn"]
+	provider = generic
