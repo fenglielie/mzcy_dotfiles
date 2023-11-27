@@ -21,6 +21,6 @@
 	encoding = utf-8
 [alias]
 	trace = log --oneline --all --graph
-	now = status -s
+	now = status -s -b
 [credential "https://latex.ustc.edu.cn"]
 	provider = generic

@@ -1,6 +1,6 @@
 # mzcy_dotfiles
 
-这是个人使用的用于同步各个平台的各种配置文件的仓库，同时附带简要的配置解释和命令速查笔记。
+这是个人使用的用于同步各个平台的各种配置文件的仓库。
 
 脚本的主要工作是在相应位置自动建立软链接，指向当前仓库的配置文件，便于在全平台统一相关配置文件。
 
@@ -10,9 +10,9 @@
 
 在HOME目录下的若干配置文件，包括：
 
-* tmux: 配置文件.tmux.conf [tmux-note](./tmux/tmux-note.md)
+* tmux: 配置文件.tmux.conf
 * vim: 配置文件.vimrc
-* git: 配置文件.gitconfig [git-note-1](./git/git-note-1.md)  [git-note-2](./git/git-note-2.md)
+* git: 配置文件.gitconfig
 * fish: 配置文件目录~/.config/fish/
 
 使用`config_home.sh`或者`config_home.ps1`，建立相应的软链接。
