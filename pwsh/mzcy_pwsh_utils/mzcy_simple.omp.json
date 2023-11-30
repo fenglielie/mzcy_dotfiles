@@ -19,9 +19,15 @@
           }
         },
         {
+            "foreground": "#4cd964",
+            "style": "plain",
+            "template": "{{ .UserName }}@{{ .HostName }} ",
+            "type": "session"
+        },
+        {
           "type": "path",
           "style": "plain",
-          "foreground": "#91ddff",
+          "foreground": "#87d7ff",
           "template": "{{ if .RootDir }}{{ .Location }} {{ else }}{{ .Path }}{{ end }}",
           "properties": {
             "folder_icon": "**",
@@ -31,7 +37,7 @@
           }
         },
         {
-          "foreground": "#FFFFFF",
+          "foreground": "#dcdfe4",
           "style": "plain",
           "template": " ({{ .HEAD }})",
           "type": "git",
@@ -44,7 +50,7 @@
           "style": "plain",
           "foreground": "#00df7b",
           "foreground_templates": [
-            "{{ if .Error }}#ff8080{{ end }}"
+            "{{ if .Error }}#ff8e95{{ end }}"
           ],
           "template": "{{ if eq .Code 0 }}{{ else }} [{{ .Code }}]{{ end }}",
           "properties": {
