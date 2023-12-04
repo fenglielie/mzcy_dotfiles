@@ -58,7 +58,7 @@ set fileformats=unix,dos
 "文件监视，如果文件被别的编辑器改变产生冲突，会发出提示，自动更新
 set autoread
 
-"激活所有模式下鼠标的使用（vim如果不接管，tmux就会接管)
+"激活所有模式下鼠标的使用（vim如果不接管，tmux就会接管）
 set mouse=a
 set selectmode=key
 
